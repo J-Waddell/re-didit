@@ -1,0 +1,20 @@
+/*nav bar highlight color*/
+.md-accent{
+  /*padding: 50px;
+  margin: 20px;*/
+  color: #455A64 !important;
+}
+md-nav-bar md-nav-ink-bar{
+  color:  #18FFFF;
+  background-color: #FFAB40;
+}
+
+.pin {
+  padding-left: 15em;
+  padding-right: 15em;
+}
+
+.pinHeading {
+  text-align: center;
+  font-weight: lighter;
+}
