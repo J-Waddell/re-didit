@@ -1,0 +1,8 @@
+md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+    border-color: #18FFFF;
+}
+
+.log1 {
+    color:#2196F3;
+    background-color: white;
+}

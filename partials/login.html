@@ -1,0 +1,23 @@
+
+<div layout="column" layout-align="center center">
+<h1>Login</h1>
+<form name="userNameForm" name="passwordForm" ng-submit="login()">
+  <md-input-container>
+    <label>Username</label>
+    <input name="userName" ng-model="email" md-input-maxlength="100" required>
+    <div ng-messages="userNameForm.userName.$error">
+      <div ng-message="required">This is required!</div>
+    </div>
+  </md-input-container>
+  <br>
+  <md-input-container>
+    <label>Password</label>
+    <!-- <input name="password" ng-model="password" required> -->
+    <input ng-hide="showpassword" type="password" ng-model="password"  required="">
+    <div ng-messages="passwordForm.password.$error">
+      <div ng-message="required">This is required!</div>
+    </div>
+      <md-button type="submit" class="log1">Login</md-button>
+  </md-input-container>
+</form>
+</div>
