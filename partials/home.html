@@ -9,27 +9,28 @@
   <input ng-model="cardImage" placeholder="Image file/url">
   <input ng-model="headLine" placeholder="Picture title">
   <input ng-model="description" placeholder="picture description">
-  <input type="button" value="send" ng-click="Showme()">
+  <input type="button" value="Save!" ng-click="Showme()">
 </div>
 
 <!-- user cards -->
+<div ng-repeat="item in fbDataList">
 <md-card class="md-card">
   <md-card-header>
     <md-card-avatar>
-      <img class="md-user-avatar" src="{{avatarUrl}}">
-      <!-- https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSk8YWw6cFwFTIwi9VC6PP2kaU5eQXpcgBRJtyko5O8I1ccGN5RIw -->
+      <img class="md-user-avatar" ng-src="{{item.avatar}}">
+      <!-- https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSk8YWw6cFwFTIwi9VC6PP2kaU5eQXpcgBRJtyko5O8I1ccGN5RIw
       <!-- https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWvR2-JQYKlBdf1eVOJQPj2-dqNC-tWIrU3o0ToFw68wmQMRCUiQ -->
     </md-card-avatar>
     <md-card-header-text>
-      <span class="md-title">{{title}}</span>
-      <span class="md-subhead">{{subHead}}</span>
+      <span class="md-title">{{item.title}}</span>
+      <span class="md-subhead">{{item.subHead}}</span>
     </md-card-header-text>
   </md-card-header>
-  <img ng-src="{{cardImage}}" class="md-card-image" alt="image caption">
+  <img ng-src="{{item.cardImage}}" class="md-card-image" alt="image caption">
   <md-card-title>
     <md-card-title-text>
-      <span class="md-headline">{{headLine}}</span>
-      <span class="md-description">{{description}}</span>
+      <span class="md-headline">{{item.headLine}}</span>
+      <span class="md-description">{{item.description}}</span>
     </md-card-title-text>
   </md-card-title>
   <md-card-actions layout="row" layout-align="start center">
@@ -41,9 +42,10 @@
       </md-button> -->
     
   </md-card-actions>
-  <md-card-content>
+  <!-- <md-card-content>
     <p>
      Card content
     </p>
-  </md-card-content>
+  </md-card-content> -->
 </md-card>
+ </div>
