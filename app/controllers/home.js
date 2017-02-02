@@ -1,5 +1,12 @@
-app.controller('HomeCtrl', function ($scope, $http, authFactory) {
-console.log('HomeCtrl')
+app.controller('HomeCtrl', function ($scope, $http, authFactory, homeFactory) {
+    console.log('HomeCtrl')
+    homeFactory.getList()
+    .then(function(fbDataObj) {
+        console.log(fbDataObj)
+        $scope.fbDataList = fbDataObj
+})
+
+
 $scope.Showme = function() {
     let obj = {
         avatar: $scope.avatarUrl,
@@ -19,10 +26,12 @@ $scope.Showme = function() {
 app.factory('homeFactory', function($http) {
     return {
         getList : () => {
-            return $http
-            .get('https://re-didit.firebaseio.com')
-            .then(function(data) {
-                console.log(data)
+            return $http.get('https://re-didit.firebaseio.com/pin/.json')
+            .then(function(httpResObj) {
+                return httpResObj.data
+            })
+            .then(function(fbDataObj) {
+                return fbDataObj;
             })
         }
     }
