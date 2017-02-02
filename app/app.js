@@ -12,6 +12,17 @@ const app = angular.module('re-diditApp', ['ngRoute', 'ngMaterial'])
   };
   firebase.initializeApp(config);
 
+const checkForAuth = {
+      checkForAuth ($location) {
+        const authReady = firebase.auth().onAuthStateChanged(user => {
+          authReady()
+          if (!user) {
+            $location.url('/')
+          }
+        })
+      }
+    }
+
 app.config(($routeProvider, $locationProvider) => {
     $locationProvider.hashPrefix('')
     // $mdIconProvider.fontset('md', 'material-icons')

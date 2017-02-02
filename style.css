@@ -1,0 +1,36 @@
+/*nav bar highlight color*/
+.md-accent{
+  /*padding: 50px;
+  margin: 20px;*/
+  color: #455A64 !important;
+}
+md-nav-bar md-nav-ink-bar{
+  color:  #18FFFF;
+  background-color: #FFAB40;
+}
+
+.pin {
+  padding-left: 15em;
+  padding-right: 15em;
+}
+
+.pinHeading {
+  text-align: center;
+  font-weight: lighter;
+}
+
+.uvote {
+    color: green;
+}
+.dvote {
+    color: red;
+}
+
+.md-card-image {
+    max-height: 200px;
+    max-width: 500px;
+}
+.md-card {
+    max-width: 100%;
+    max-height: 500px;
+}

@@ -1,8 +1,20 @@
 md-input-container:not(.md-input-invalid).md-input-focused .md-input {
-    border-color: #18FFFF;
+    border-color: #FF9800;
+}
+
+.md-display-4 {
+    color: gray;
+}
+
+.md-display-3 {
+    color: darkgoldenrod;
 }
 
 .log1 {
-    color:#2196F3;
-    background-color: white;
+    color:white;
+    background-color: #EF6C00;
+}
+
+.log2 {
+    color:red;
 }
