@@ -1,2 +1,49 @@
-<h1 class="title">Re-didIT</h1>
+<div layout="column" layout-align="start center">
+<h1 class="md-display-3">Redid.IT</h1>
+</div>
 
+<div>
+  <input ng-model="avatarUrl" placeholder="Enter Avatar image url">
+  <input ng-model="title" placeholder="Card Title">
+  <input ng-model="subHead" placeholder="Sub Title">
+  <input ng-model="cardImage" placeholder="Image file/url">
+  <input ng-model="headLine" placeholder="Picture title">
+  <input ng-model="description" placeholder="picture description">
+  <input type="button" value="send" ng-click="Showme()">
+</div>
+
+<!-- user cards -->
+<md-card class="md-card">
+  <md-card-header>
+    <md-card-avatar>
+      <img class="md-user-avatar" src="{{avatarUrl}}">
+      <!-- https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSk8YWw6cFwFTIwi9VC6PP2kaU5eQXpcgBRJtyko5O8I1ccGN5RIw -->
+      <!-- https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWvR2-JQYKlBdf1eVOJQPj2-dqNC-tWIrU3o0ToFw68wmQMRCUiQ -->
+    </md-card-avatar>
+    <md-card-header-text>
+      <span class="md-title">{{title}}</span>
+      <span class="md-subhead">{{subHead}}</span>
+    </md-card-header-text>
+  </md-card-header>
+  <img ng-src="{{cardImage}}" class="md-card-image" alt="image caption">
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">{{headLine}}</span>
+      <span class="md-description">{{description}}</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-actions layout="row" layout-align="start center">
+    <md-button class="dvote">Down Vote</md-button>
+    <md-button class="uvote">Up Vote</md-button>
+    
+      <!-- <md-button class="md-icon-button md-accent" aria-label="Favorite">
+        <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+      </md-button> -->
+    
+  </md-card-actions>
+  <md-card-content>
+    <p>
+     Card content
+    </p>
+  </md-card-content>
+</md-card>
