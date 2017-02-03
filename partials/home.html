@@ -8,7 +8,7 @@
     <md-input-container class="md-block">
       <label>Enter Avatar Image URL</label>
       <input ng-model="avatarUrl">
-    </md-input-container>
+      </md-input-container>
     <md-input-container class="md-block">
       <label>Enter Card Title</label>
       <input ng-model="title">
@@ -29,6 +29,10 @@
       <label>Enter Picture Description</label>
       <input ng-model="description">
     </md-input-container>
+      <!-- <md-input-container> -->
+      <md-button><input type="file" ng-model="avatarUrl" name="file" id="fileInput"></md-button>
+      <img id="myimg" src="">
+    <!-- </md-input-container> -->
     <md-button type="button" ng-click="Showme()">Save Post</md-button>
   </div>
 
