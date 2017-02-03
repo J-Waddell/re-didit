@@ -20,15 +20,15 @@ md-nav-bar md-nav-ink-bar{
 }
 
 .uvote {
-    color: green;
+    color: red;
 }
 .dvote {
-    color: red;
+    color: green;
 }
 
 .md-card-image {
     max-height: 200px;
-    max-width: 500px;
+    max-width: 400px;
 }
 .md-card {
     max-width: 100%;

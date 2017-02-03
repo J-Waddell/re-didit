@@ -35,7 +35,7 @@ app.config(($routeProvider, $locationProvider) => {
             controller: 'HomeCtrl',
             templateUrl: 'partials/home.html',
         })
-        .when('/search', {
+        .when('/post', {
             controller: 'SearchCtrl',
             templateUrl: 'partials/search.html'
         })
