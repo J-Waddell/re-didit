@@ -4,6 +4,20 @@ app.controller('HomeCtrl', function ($scope, $http, authFactory, homeFactory) {
     .then(function(fbDataObj) {
         console.log(fbDataObj)
         $scope.fbDataList = fbDataObj
+
+        // storage ref for picture
+        let storageRef = firebase.storage().ref();
+
+        let inputElement = document.getElementById('fileInput');
+        inputElement.addEventListener("change", handleFiles, false);
+
+            function handleFiles() {
+                var fileList = this.files;
+                storage.child(fileList[0].name).put(fileList[0])
+                .then(function(snapshot) {
+                    console.log('uploaded')
+                })
+            }
 })
 
 
